@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap')
 
 $clr_1: #118DA8
 $clr_l: #0f7c94d0
@@ -22,7 +22,7 @@ body
         max-width: 1320px
         margin: 0 auto
     &__container
-        height: 119px
+        height: 90px
         padding: 0 15px
         box-sizing: content-box
         display: flex
@@ -114,14 +114,14 @@ body
         margin-left: 22px
     &__logo__listen-icon
         font-family: 'DM Sans'
-        font-size: 0.9375rem
+        font-size: 1rem
         line-height: calc(24 / 15 * 100%)        
         margin-bottom: 16px
     &__link__listen-icon
         margin-right: 17px
         text-decoration: none    
         
-@media (max-width: 1250px)
+@media (max-width: 1249.99px)
     .intro
         &__content
             max-width: 400px
@@ -152,22 +152,20 @@ body
         &__image
             display: flex
             justify-content: center
-            max-width: 545px
+            min-width: 100%
             max-height: 728px
+            object-fit: cover
             opacity: 0.33
         &__content
             position: absolute
             top: 130px
             left: 18%
             margin: 60px auto 0 auto
+        &__text
+            margin-bottom: 150px
         &__block__listen-icon
             margin-left: 75px
             text-align: left
-        &__logo__listen-icon
-            font-family: 'DM Sans'
-            font-size: 0.9375rem
-            line-height: calc(24 / 15 * 100%)        
-            margin-bottom: 16px
         &__link__listen-icon
             margin-right: 17px
             text-decoration: none    
@@ -178,7 +176,7 @@ body
             display: flex
             justify-content: center
             max-width: 490px
-            margin: 0 auto
+            margin: 0 auto    
             position: relative
         &__container
             display: flex
@@ -201,7 +199,7 @@ body
             padding: 0px 20px
             max-width: 390px
         &__text
-            font-size: 25px
+            font-size: 32px
         &__block__listen-icon
             margin-left: 75px
             text-align: left
@@ -233,15 +231,16 @@ body
             margin: 60px auto 0 auto
             padding: 0px 20px
         &__text
-            font-size: 18px
+            font-size: 26px
+            margin-bottom: 80px
         &__block__listen-icon
-            margin-left: 55px
+            margin-left: 45px
             text-align: left
         &__logo__listen-icon
-            font-size: 0.625rem
+            font-size: 1rem
         &__image__listen-icon
-            max-width: 18px
-            max-height: 18px
+            max-width: 20px
+            max-height: 20px
 
 /*episodes*/
 .episodes
@@ -261,21 +260,18 @@ body
         align-self: flex-start
         font-family: 'DM Sans'
         font-size: 64px
-        font-weight: 400
+        font-weight: 500
         line-height: calc(79 / 64 * 100%)
         letter-spacing: 2.88px
-    &__button-link
-    &__cards-container
-
     &__cards-container__box
         background-color: #000
         border-radius: 19px
         padding: 40px
         margin-bottom: 60px
         display: flex
-        flex-direction: row
-    &__content-block
-        
+    &__labels-block
+        display: inline-flex   
+        flex-direction: column
     &__image
         margin-right: 53px
     &__tablet
@@ -283,7 +279,8 @@ body
         font-size: 18px
         border-radius: 6px      
         background-color: #191919
-        display: inline-block
+        display: flex
+        justify-content: center
         margin-bottom: 48px
     &__over-title
         color: $clr_1
@@ -291,7 +288,7 @@ body
         line-height: calc(27 / 17 * 100%)
         margin-bottom: 18px
     &__content-title
-        font-weight: 400
+        font-weight: 500
         font-size: 64px
         line-height: calc(70 / 64 * 100%)
         letter-spacing: 1px
@@ -303,6 +300,7 @@ body
         margin-bottom: 30px
         
 .buttons-link
+    display: inline-block
     padding: 12px 20px
     color: #fff
     background-color: $clr_1
@@ -315,4 +313,90 @@ body
     &:hover
         color: #dededec0
         background-color: $clr_l
+
+@media (max-width: 969.99px)
+    .buttons-link
+        padding: 10px 19px
+        color: #fff
+        background-color: $clr_1
+        border-radius: 6px
+        text-decoration: none
+        font-family: 'DM Sans'
+        transition: all .4s ease
+        font-size: 16px
+        line-height: calc(27 / 17 * 100%)
+        &:hover
+            color: #dededec0
+            background-color: $clr_l
+
+@media (max-width: 1249.99px)
+    .episodes
+        &__content-title
+            font-size: 48px
+        &__description
+            font-size: 18px
+        &__image
+            max-height: 382px
+            max-width: 414px
+            margin-right: 43px
+
+@media (max-width: 969.99px)
+    .episodes
+        &__title 
+            font-size: 48px
+            display: flex
+            align-self: center
+        &__cards-container__box
+            padding: 30px
+        &__image
+            margin-right: 30px
+        &__tablet
+            padding: 4px 14px
+            font-size: 16px
+            margin-bottom: 38px
+        &__over-title
+            font-size: 16px
+        &__content-title
+            font-size: 42px
+        &__description
+            font-size: 16px
+
+@media (max-width: 767.98px)
+    .episodes
+        &__title
+            font-size: 32px
+        &__cards-container__box
+            padding: 20px
+            margin-bottom: 35px
+            display: flex
+            flex-direction: column
+        &__image
+            min-width: 100%
+            min-height: 300px
+            object-fit: cover
+            margin-bottom: 30px
+        &__labels-block
+            display: flex
+            flex-direction: row-reverse
+            justify-content: space-between
+            margin-bottom: 20px
+        &__tablet
+            margin: 0
+        &__over-title
+            margin: 0
+        &__content-title
+            font-size: 26px
+            margin-bottom: 14px
+
+@media (max-width: 497.98px)
+    .episodes
+        &__container
+            flex-direction: column
+            align-items: flex-start
+        &__title
+            align-self: flex-start
+        &__content-title
+            font-size: 20px
             
+
+   
